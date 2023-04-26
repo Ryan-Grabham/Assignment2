@@ -16,13 +16,17 @@ class ListProjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let userId = UserData.shared.currentUser!.id
         
-        let url = URL(string: "http://127.0.0.1:5000/api/projects/get/all")!
+        let urlString = "http://127.0.0.1:5000/api/projects/get/byuserid?id=\(userId)"
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
         URLSession.shared.fetchData(for: url) { (result: Result<[Project], Error>) in
             switch result {
             case .success(let results):
                 self.projects.append(contentsOf: results)
-                print(results)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -30,6 +34,8 @@ class ListProjectViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
+            
+            
         }
     }
     
