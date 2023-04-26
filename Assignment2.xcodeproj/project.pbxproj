@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD61829D29F92DA30029DF8C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61829C29F92DA30029DF8C /* Model.swift */; };
+		DD61829F29F933A00029DF8C /* URLSessionCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61829E29F933A00029DF8C /* URLSessionCalls.swift */; };
+		DD6182A129F93CE80029DF8C /* ListProjectViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6182A029F93CE80029DF8C /* ListProjectViewController+DataSource.swift */; };
 		DD61DD5D29E6A066004FEC09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD5C29E6A066004FEC09 /* AppDelegate.swift */; };
 		DD61DD5F29E6A066004FEC09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD5E29E6A066004FEC09 /* SceneDelegate.swift */; };
 		DD61DD6129E6A066004FEC09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD6029E6A066004FEC09 /* ViewController.swift */; };
@@ -16,6 +19,12 @@
 		DD61DD7429E6A067004FEC09 /* Assignment2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD7329E6A067004FEC09 /* Assignment2Tests.swift */; };
 		DD61DD7E29E6A067004FEC09 /* Assignment2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD7D29E6A067004FEC09 /* Assignment2UITests.swift */; };
 		DD61DD8029E6A067004FEC09 /* Assignment2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD7F29E6A067004FEC09 /* Assignment2UITestsLaunchTests.swift */; };
+		DD61DD8D29E6BCF2004FEC09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD8C29E6BCF2004FEC09 /* RegisterViewController.swift */; };
+		DD61DD8F29E6C5D4004FEC09 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD8E29E6C5D4004FEC09 /* LogInViewController.swift */; };
+		DD61DD9129E6C7DF004FEC09 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD9029E6C7DF004FEC09 /* UserData.swift */; };
+		DD61DD9329E6D1B7004FEC09 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD9229E6D1B7004FEC09 /* MenuViewController.swift */; };
+		DD61DD9529E6D4AC004FEC09 /* ListProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD9429E6D4AC004FEC09 /* ListProjectViewController.swift */; };
+		DDEA101029F000F60009E255 /* NewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA100F29F000F60009E255 /* NewProjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD61829C29F92DA30029DF8C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DD61829E29F933A00029DF8C /* URLSessionCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCalls.swift; sourceTree = "<group>"; };
+		DD6182A029F93CE80029DF8C /* ListProjectViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListProjectViewController+DataSource.swift"; sourceTree = "<group>"; };
 		DD61DD5929E6A066004FEC09 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD61DD5C29E6A066004FEC09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD61DD5E29E6A066004FEC09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,12 @@
 		DD61DD7929E6A067004FEC09 /* Assignment2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD61DD7D29E6A067004FEC09 /* Assignment2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment2UITests.swift; sourceTree = "<group>"; };
 		DD61DD7F29E6A067004FEC09 /* Assignment2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DD61DD8C29E6BCF2004FEC09 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DD61DD8E29E6C5D4004FEC09 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		DD61DD9029E6C7DF004FEC09 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		DD61DD9229E6D1B7004FEC09 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		DD61DD9429E6D4AC004FEC09 /* ListProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectViewController.swift; sourceTree = "<group>"; };
+		DDEA100F29F000F60009E255 /* NewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +124,15 @@
 				DD61DD6529E6A067004FEC09 /* Assets.xcassets */,
 				DD61DD6729E6A067004FEC09 /* LaunchScreen.storyboard */,
 				DD61DD6A29E6A067004FEC09 /* Info.plist */,
+				DD61DD8C29E6BCF2004FEC09 /* RegisterViewController.swift */,
+				DD61DD8E29E6C5D4004FEC09 /* LogInViewController.swift */,
+				DD61DD9029E6C7DF004FEC09 /* UserData.swift */,
+				DD61DD9229E6D1B7004FEC09 /* MenuViewController.swift */,
+				DD61DD9429E6D4AC004FEC09 /* ListProjectViewController.swift */,
+				DDEA100F29F000F60009E255 /* NewProjectViewController.swift */,
+				DD61829C29F92DA30029DF8C /* Model.swift */,
+				DD61829E29F933A00029DF8C /* URLSessionCalls.swift */,
+				DD6182A029F93CE80029DF8C /* ListProjectViewController+DataSource.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -258,9 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD61DD9129E6C7DF004FEC09 /* UserData.swift in Sources */,
+				DDEA101029F000F60009E255 /* NewProjectViewController.swift in Sources */,
 				DD61DD6129E6A066004FEC09 /* ViewController.swift in Sources */,
 				DD61DD5D29E6A066004FEC09 /* AppDelegate.swift in Sources */,
+				DD61DD9329E6D1B7004FEC09 /* MenuViewController.swift in Sources */,
+				DD6182A129F93CE80029DF8C /* ListProjectViewController+DataSource.swift in Sources */,
+				DD61829D29F92DA30029DF8C /* Model.swift in Sources */,
+				DD61DD9529E6D4AC004FEC09 /* ListProjectViewController.swift in Sources */,
+				DD61829F29F933A00029DF8C /* URLSessionCalls.swift in Sources */,
 				DD61DD5F29E6A066004FEC09 /* SceneDelegate.swift in Sources */,
+				DD61DD8F29E6C5D4004FEC09 /* LogInViewController.swift in Sources */,
+				DD61DD8D29E6BCF2004FEC09 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
