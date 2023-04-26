@@ -23,6 +23,9 @@ class NewProjectViewController: UIViewController {
         }
         
         let parameters: [String: Any] = ["user_id": UserData.shared.currentUser?.id ?? "", "name": name, "description": description, "start_date": start_date, "end_date": end_date]
+        
+        
+        
 
         guard let url = URL(string: "http://127.0.0.1:5000/api/projects/add") else {
             return
@@ -61,13 +64,13 @@ class NewProjectViewController: UIViewController {
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 if let dict = json as? [String: Any],
-                   let registerSuccess = dict["projectAdd_Success"] as? Bool,
-                   registerSuccess == true {
+                   let addSuccess = dict["Add_Success"] as? Bool,
+                   addSuccess == true {
                     print("New Project Added")
                     DispatchQueue.main.async {
-                        self.errorLabel.text = "Success!"
-                        let menuvc = (self.storyboard?.instantiateViewController(withIdentifier: "MenuVC"))!
-                        self.navigationController?.pushViewController(menuvc, animated: true)
+                        self.errorLabel.text = "Project Added!"
+                        let uservc = (self.storyboard?.instantiateViewController(withIdentifier: "UserVC"))!
+                        self.navigationController?.pushViewController(uservc, animated: true)
                     }
 
                 } else {
