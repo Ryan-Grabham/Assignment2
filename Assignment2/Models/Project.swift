@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  Project.swift
 //  Assignment2
 //
 //  Created by Ryan Grabham (Student) on 26/04/2023.
@@ -8,12 +8,12 @@
 import Foundation
 
 struct Project: Codable, Identifiable {
-    let id: Int
-    let name: String
-    let description: String
-    let start_date: String
-    let end_date: String
-    let user_id: Int
+    var id: Int
+    var name: String
+    var description: String
+    var start_date: String
+    var end_date: String
+    var user_id: Int
     var isComplete: Bool = false
 
     init(from decoder: Decoder) throws {
@@ -28,9 +28,16 @@ struct Project: Codable, Identifiable {
         let isCompleteInt = try container.decodeIfPresent(Int.self, forKey: .isComplete) ?? 0
         isComplete = isCompleteInt == 1
     }
+    init(){
+        id = -1
+        name = ""
+        description = ""
+        start_date = ""
+        end_date = ""
+        user_id = -1
+        isComplete = false
+    }
 }
-
-
 
 extension [Project] {
     func indexOfProject(withId id: Project.ID) -> Self.Index {

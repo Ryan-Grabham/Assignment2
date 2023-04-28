@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD61829D29F92DA30029DF8C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61829C29F92DA30029DF8C /* Model.swift */; };
+		DD61829D29F92DA30029DF8C /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61829C29F92DA30029DF8C /* Project.swift */; };
 		DD61829F29F933A00029DF8C /* URLSessionCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61829E29F933A00029DF8C /* URLSessionCalls.swift */; };
+		DD6182AA29FBD9210029DF8C /* ProjectDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6182A929FBD9210029DF8C /* ProjectDoneButton.swift */; };
+		DD6182AC29FBF87C0029DF8C /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6182AB29FBF87C0029DF8C /* ProjectViewController.swift */; };
 		DD61DD5D29E6A066004FEC09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD5C29E6A066004FEC09 /* AppDelegate.swift */; };
 		DD61DD5F29E6A066004FEC09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD5E29E6A066004FEC09 /* SceneDelegate.swift */; };
 		DD61DD6129E6A066004FEC09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD6029E6A066004FEC09 /* ViewController.swift */; };
@@ -44,8 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD61829C29F92DA30029DF8C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DD61829C29F92DA30029DF8C /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		DD61829E29F933A00029DF8C /* URLSessionCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCalls.swift; sourceTree = "<group>"; };
+		DD6182A929FBD9210029DF8C /* ProjectDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDoneButton.swift; sourceTree = "<group>"; };
+		DD6182AB29FBF87C0029DF8C /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		DD61DD5929E6A066004FEC09 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD61DD5C29E6A066004FEC09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD61DD5E29E6A066004FEC09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD6182A229FBBDFA0029DF8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD61829C29F92DA30029DF8C /* Project.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD6182A529FBC0F40029DF8C /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD61DD9429E6D4AC004FEC09 /* ListProjectViewController.swift */,
+				DD6182A929FBD9210029DF8C /* ProjectDoneButton.swift */,
+			);
+			path = ListViewController;
+			sourceTree = "<group>";
+		};
+		DD6182AD29FBF9C20029DF8C /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD6182AB29FBF87C0029DF8C /* ProjectViewController.swift */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
 		DD61DD5029E6A066004FEC09 = {
 			isa = PBXGroup;
 			children = (
@@ -126,10 +155,11 @@
 				DD61DD8E29E6C5D4004FEC09 /* LogInViewController.swift */,
 				DD61DD9029E6C7DF004FEC09 /* UserData.swift */,
 				DD61DD9229E6D1B7004FEC09 /* MenuViewController.swift */,
-				DD61DD9429E6D4AC004FEC09 /* ListProjectViewController.swift */,
+				DD6182A529FBC0F40029DF8C /* ListViewController */,
 				DDEA100F29F000F60009E255 /* NewProjectViewController.swift */,
-				DD61829C29F92DA30029DF8C /* Model.swift */,
+				DD6182A229FBBDFA0029DF8C /* Models */,
 				DD61829E29F933A00029DF8C /* URLSessionCalls.swift */,
+				DD6182AD29FBF9C20029DF8C /* DetailViewController */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -285,9 +315,11 @@
 				DD61DD9129E6C7DF004FEC09 /* UserData.swift in Sources */,
 				DDEA101029F000F60009E255 /* NewProjectViewController.swift in Sources */,
 				DD61DD6129E6A066004FEC09 /* ViewController.swift in Sources */,
+				DD6182AC29FBF87C0029DF8C /* ProjectViewController.swift in Sources */,
 				DD61DD5D29E6A066004FEC09 /* AppDelegate.swift in Sources */,
 				DD61DD9329E6D1B7004FEC09 /* MenuViewController.swift in Sources */,
-				DD61829D29F92DA30029DF8C /* Model.swift in Sources */,
+				DD6182AA29FBD9210029DF8C /* ProjectDoneButton.swift in Sources */,
+				DD61829D29F92DA30029DF8C /* Project.swift in Sources */,
 				DD61DD9529E6D4AC004FEC09 /* ListProjectViewController.swift in Sources */,
 				DD61829F29F933A00029DF8C /* URLSessionCalls.swift in Sources */,
 				DD61DD5F29E6A066004FEC09 /* SceneDelegate.swift in Sources */,
