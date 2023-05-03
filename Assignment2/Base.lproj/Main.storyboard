@@ -217,9 +217,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="34.333333333333336"/>
                                         <color key="tintColor" red="0.69411764710000001" green="0.69803921570000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="View Projects"/>
                                         <connections>
-                                            <segue destination="ntf-cm-EpG" kind="show" id="Rum-B5-Tga"/>
+                                            <segue destination="KwV-ym-CqZ" kind="show" id="mfs-Cf-dq0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-9r-5pI">
@@ -327,14 +327,14 @@
             <point key="canvasLocation" x="3542.7480916030531" y="748.59154929577471"/>
         </scene>
         <!--List Project View Controller-->
-        <scene sceneID="BjR-TA-r9D">
+        <scene sceneID="8Me-Xe-qfO">
             <objects>
-                <collectionViewController id="ntf-cm-EpG" customClass="ListProjectViewController" customModule="Assignment2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eZ5-nM-RSW">
+                <collectionViewController id="KwV-ym-CqZ" customClass="ListProjectViewController" customModule="Assignment2" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="Cell" dataMode="prototypes" id="QVa-GH-Jo5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="crh-nJ-bLV">
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="woJ-En-dOv">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -342,15 +342,15 @@
                         </collectionViewFlowLayout>
                         <cells/>
                         <connections>
-                            <outlet property="dataSource" destination="ntf-cm-EpG" id="cvc-8y-8ce"/>
-                            <outlet property="delegate" destination="ntf-cm-EpG" id="2h8-Xy-OsQ"/>
+                            <outlet property="dataSource" destination="KwV-ym-CqZ" id="0Ob-0t-xbc"/>
+                            <outlet property="delegate" destination="KwV-ym-CqZ" id="IsR-fR-J7S"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="LMk-py-RXn"/>
+                    <navigationItem key="navigationItem" id="vdg-Dm-tYY"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2xS-wd-ajz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjW-0y-Ulg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4298" y="-2"/>
+            <point key="canvasLocation" x="4316.7938931297704" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xh8-4f-I8e">

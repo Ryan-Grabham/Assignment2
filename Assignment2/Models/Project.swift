@@ -28,15 +28,7 @@ struct Project: Codable, Identifiable {
         let isCompleteInt = try container.decodeIfPresent(Int.self, forKey: .isComplete) ?? 0
         isComplete = isCompleteInt == 1
     }
-    init(){
-        id = -1
-        name = ""
-        description = ""
-        start_date = ""
-        end_date = ""
-        user_id = -1
-        isComplete = false
-    }
+
 }
 
 extension [Project] {
