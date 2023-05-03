@@ -64,18 +64,45 @@ extension ListProjectViewController {
         updateSnapshot(reloading: [id])
         
         let urlString = "http://127.0.0.1:5000/api/projects/update/\(project.id)"
-        URLSession.shared.putData(project, urlString: urlString)
-        { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let updatedProject):
-                    self.updateProject(updatedProject)
-                    self.updateSnapshot(reloading: [id])
-                case .failure(let error):
-                    print("Error updating project in API:", error)
-                }
-            }
+        
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
         }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        
+        let jsonEncoder = JSONEncoder()
+        guard let jsonData = try? jsonEncoder.encode(project) else {
+            print("Unable to encode project to JSON")
+            return
+        }
+        
+        request.httpBody = jsonData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let data = data else {
+                print("No data received")
+                return
+            }
+            
+            let jsonDecoder = JSONDecoder()
+            guard let updatedProject = try? jsonDecoder.decode(Project.self, from: data) else {
+                print("Unable to decode updated project")
+                return
+            }
+            
+            print("Updated project: \(updatedProject)")
+        }
+        
+        task.resume()
     }
     
     
