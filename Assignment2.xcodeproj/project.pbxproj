@@ -30,6 +30,12 @@
 		DD61DD9329E6D1B7004FEC09 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD9229E6D1B7004FEC09 /* MenuViewController.swift */; };
 		DD61DD9529E6D4AC004FEC09 /* ListProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61DD9429E6D4AC004FEC09 /* ListProjectViewController.swift */; };
 		DD8DD4742A02A7FB003BE1A2 /* ProjectViewController+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DD4732A02A7FB003BE1A2 /* ProjectViewController+CellConfiguration.swift */; };
+		DD8DD4772A02AA9D003BE1A2 /* UIView+PinnedSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DD4762A02AA9D003BE1A2 /* UIView+PinnedSubview.swift */; };
+		DD8DD4792A02AC98003BE1A2 /* TextFieldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DD4782A02AC98003BE1A2 /* TextFieldContentView.swift */; };
+		DD8DD47B2A02ADEF003BE1A2 /* UIContentConfiguration+Stateless.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DD47A2A02ADEF003BE1A2 /* UIContentConfiguration+Stateless.swift */; };
+		DD8DD47D2A02B38A003BE1A2 /* TextViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DD47C2A02B38A003BE1A2 /* TextViewContentView.swift */; };
+		DD8DD47F2A02B52A003BE1A2 /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DD47E2A02B52A003BE1A2 /* DatePickerContentView.swift */; };
+		DD8DD4812A02B548003BE1A2 /* SwitchButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DD4802A02B548003BE1A2 /* SwitchButtonContentView.swift */; };
 		DDEA101029F000F60009E255 /* NewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA100F29F000F60009E255 /* NewProjectViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +84,12 @@
 		DD61DD9229E6D1B7004FEC09 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DD61DD9429E6D4AC004FEC09 /* ListProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectViewController.swift; sourceTree = "<group>"; };
 		DD8DD4732A02A7FB003BE1A2 /* ProjectViewController+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectViewController+CellConfiguration.swift"; sourceTree = "<group>"; };
+		DD8DD4762A02AA9D003BE1A2 /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
+		DD8DD4782A02AC98003BE1A2 /* TextFieldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
+		DD8DD47A2A02ADEF003BE1A2 /* UIContentConfiguration+Stateless.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentConfiguration+Stateless.swift"; sourceTree = "<group>"; };
+		DD8DD47C2A02B38A003BE1A2 /* TextViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewContentView.swift; sourceTree = "<group>"; };
+		DD8DD47E2A02B52A003BE1A2 /* DatePickerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
+		DD8DD4802A02B548003BE1A2 /* SwitchButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButtonContentView.swift; sourceTree = "<group>"; };
 		DDEA100F29F000F60009E255 /* NewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +121,7 @@
 		DD6182A229FBBDFA0029DF8C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DD61DD9029E6C7DF004FEC09 /* UserData.swift */,
 				DD61829C29F92DA30029DF8C /* Project.swift */,
 			);
 			path = Models;
@@ -159,22 +172,22 @@
 		DD61DD5B29E6A066004FEC09 /* Assignment2 */ = {
 			isa = PBXGroup;
 			children = (
+				DD6182A229FBBDFA0029DF8C /* Models */,
 				DD61DD5C29E6A066004FEC09 /* AppDelegate.swift */,
 				DD61DD5E29E6A066004FEC09 /* SceneDelegate.swift */,
+				DD8DD4752A02AA35003BE1A2 /* ContentViews */,
+				DD6182A529FBC0F40029DF8C /* ListViewController */,
+				DD6182AD29FBF9C20029DF8C /* DetailViewController */,
 				DD61DD6029E6A066004FEC09 /* ViewController.swift */,
 				DD61DD6229E6A066004FEC09 /* Main.storyboard */,
-				DD61DD9029E6C7DF004FEC09 /* UserData.swift */,
 				DD61DD6529E6A067004FEC09 /* Assets.xcassets */,
 				DD61DD6729E6A067004FEC09 /* LaunchScreen.storyboard */,
 				DD61DD6A29E6A067004FEC09 /* Info.plist */,
 				DD61DD8C29E6BCF2004FEC09 /* RegisterViewController.swift */,
 				DD61DD8E29E6C5D4004FEC09 /* LogInViewController.swift */,
 				DD61DD9229E6D1B7004FEC09 /* MenuViewController.swift */,
-				DD6182A529FBC0F40029DF8C /* ListViewController */,
 				DDEA100F29F000F60009E255 /* NewProjectViewController.swift */,
-				DD6182A229FBBDFA0029DF8C /* Models */,
 				DD61829E29F933A00029DF8C /* URLSessionCalls.swift */,
-				DD6182AD29FBF9C20029DF8C /* DetailViewController */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -194,6 +207,19 @@
 				DD61DD7F29E6A067004FEC09 /* Assignment2UITestsLaunchTests.swift */,
 			);
 			path = Assignment2UITests;
+			sourceTree = "<group>";
+		};
+		DD8DD4752A02AA35003BE1A2 /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				DD8DD4762A02AA9D003BE1A2 /* UIView+PinnedSubview.swift */,
+				DD8DD4782A02AC98003BE1A2 /* TextFieldContentView.swift */,
+				DD8DD47A2A02ADEF003BE1A2 /* UIContentConfiguration+Stateless.swift */,
+				DD8DD47C2A02B38A003BE1A2 /* TextViewContentView.swift */,
+				DD8DD47E2A02B52A003BE1A2 /* DatePickerContentView.swift */,
+				DD8DD4802A02B548003BE1A2 /* SwitchButtonContentView.swift */,
+			);
+			path = ContentViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,17 +359,23 @@
 				DD61DD6129E6A066004FEC09 /* ViewController.swift in Sources */,
 				DD6182B52A025B0B0029DF8C /* ProjectViewController+Section.swift in Sources */,
 				DD6182AC29FBF87C0029DF8C /* ProjectViewController.swift in Sources */,
+				DD8DD47D2A02B38A003BE1A2 /* TextViewContentView.swift in Sources */,
 				DD61DD5D29E6A066004FEC09 /* AppDelegate.swift in Sources */,
 				DD6182B12A02589F0029DF8C /* ProductViewController+Row.swift in Sources */,
 				DD61DD9329E6D1B7004FEC09 /* MenuViewController.swift in Sources */,
 				DD8DD4742A02A7FB003BE1A2 /* ProjectViewController+CellConfiguration.swift in Sources */,
 				DD6182AA29FBD9210029DF8C /* ProjectDoneButton.swift in Sources */,
 				DD61829D29F92DA30029DF8C /* Project.swift in Sources */,
+				DD8DD4792A02AC98003BE1A2 /* TextFieldContentView.swift in Sources */,
 				DD61DD9529E6D4AC004FEC09 /* ListProjectViewController.swift in Sources */,
+				DD8DD47B2A02ADEF003BE1A2 /* UIContentConfiguration+Stateless.swift in Sources */,
+				DD8DD4772A02AA9D003BE1A2 /* UIView+PinnedSubview.swift in Sources */,
 				DD61829F29F933A00029DF8C /* URLSessionCalls.swift in Sources */,
 				DD61DD5F29E6A066004FEC09 /* SceneDelegate.swift in Sources */,
 				DD6182BA2A0267DD0029DF8C /* ProjectListViewController+DataSource.swift in Sources */,
+				DD8DD4812A02B548003BE1A2 /* SwitchButtonContentView.swift in Sources */,
 				DD61DD8F29E6C5D4004FEC09 /* LogInViewController.swift in Sources */,
+				DD8DD47F2A02B52A003BE1A2 /* DatePickerContentView.swift in Sources */,
 				DD61DD8D29E6BCF2004FEC09 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
