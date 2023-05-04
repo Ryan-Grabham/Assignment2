@@ -1,14 +1,13 @@
 //
-//  Extensions.swift
-//  ProjectZero
+//  URLSessionCalls.swift
+//  AssignmentApp
 //
-//  Created by Ryan Grabham on 20/04/2023.
+//  Created by Mitchell Wood (Student) on 26/04/2023.
 //
-
 import Foundation
 
 extension URLSession {
-    
+    //GET DATA
     func fetchData<T: Codable>(for url: URL, completion: @escaping (Result<T, Error>) -> Void) {
         self.dataTask(with: url) { (data, response, error) in
             if let error = error {
@@ -34,6 +33,7 @@ extension URLSession {
         }.resume()
     }
 
+    //UPDATE DATA
     func putData<T: Codable>(_ object: T, urlString: String, completion: @escaping (Result<T, Error>) -> Void) {
         guard let url = URL(string: urlString) else {
             return
@@ -83,6 +83,7 @@ extension URLSession {
         }.resume()
     }
     
+    //DELETE DATA
     func deleteData(urlString: String, completion: @escaping (Result<Void, Error>) -> Void) {
           guard let url = URL(string: urlString) else {
               return
@@ -106,6 +107,7 @@ extension URLSession {
           }.resume()
       }
       
+    //POST DATA
       func postData<T: Codable>(_ object: T, urlString: String, completion: @escaping (Result<T, Error>) -> Void) {
           guard let url = URL(string: urlString) else {
               return
@@ -145,22 +147,13 @@ extension URLSession {
               }
               
               do {
-                  if let jsonString = String(data: data, encoding: .utf8) {
-                      print("Received JSON data: \(jsonString)")
-                  }
-                  
                   let decoder = JSONDecoder()
-                  let createdObject = try decoder.decode([T].self, from: data)
-                  
-                  if let createdObject = createdObject.first {
-                      completion(.success(createdObject))
-                  }
+                  let createdObject = try decoder.decode(T.self, from: data)
+                  completion(.success(createdObject))
               } catch {
                   print("Error decoding JSON: \(error)")
                   completion(.failure(error))
               }
-              
-              
           }.resume()
       }
   }

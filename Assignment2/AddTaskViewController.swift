@@ -1,30 +1,36 @@
 import UIKit
 
+class AddTaskViewController: UIViewController {
 
-
-class NewProjectViewController: UIViewController {
-    @IBOutlet weak var projectName: UITextField!
-    @IBOutlet weak var projectDescription: UITextField!
-    @IBOutlet weak var startDate: UIDatePicker!
-    @IBOutlet weak var endDate: UIDatePicker!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet var nameField: UITextField!
+    @IBOutlet var descriptionField: UITextField!
+    @IBOutlet var dueDateField: UIDatePicker!
+    @IBOutlet var errorLabel: UILabel!
     
+    var projectId : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Project ID")
+        self.projectId = DataManager.shared.projectId!
+        print(self.projectId)
+        
     }
     
     
-    @IBAction func addProjectButtonPressed(_ sender: UIButton) {
-        guard let name = projectName.text, !name.isEmpty,
-              let description = projectDescription.text, !description.isEmpty,
-              let start_date = startDate?.date.description,
-              let end_date = endDate?.date.description else {
+    @IBAction func addTask(_ sender: Any) {
+        //Need to pass in a name, description, due date, status and a project id.
+        guard let name = nameField.text, !name.isEmpty,
+              let description = descriptionField.text, !description.isEmpty,
+              let due_date = dueDateField?.date.description
+              else {
             return
         }
         
-        let parameters: [String: Any] = ["user_id": UserData.shared.currentUser?.id ?? "", "name": name, "description": description, "start_date": start_date, "end_date": end_date]
-        guard let url = URL(string: "http://127.0.0.1:5000/api/projects/add") else {
+        guard let id = self.projectId else { return }
+        print(id)
+        let parameters: [String: Any] = ["project_id": id , "name": name, "description": description, "due_date": due_date, "status": "In Progress"]
+        guard let url = URL(string: "http://127.0.0.1:5000/api/tasks/add") else {
             return
         }
         
@@ -66,16 +72,16 @@ class NewProjectViewController: UIViewController {
                 if let dict = json as? [String: Any],
                     let addSuccess = dict["Add_Success"] as? Bool,
                     addSuccess == true {
-                    print("New Project Added")
+                    print("New Task Added")
                     
                     DispatchQueue.main.async {
-                        self.errorLabel.text = "Project Added!"
-                        let uservc = (self.storyboard?.instantiateViewController(withIdentifier: "UserVC"))!
-                        self.navigationController?.pushViewController(uservc, animated: true)
+                        self.errorLabel.text = "Task Added!"
+                        let taskVC = (self.storyboard?.instantiateViewController(withIdentifier: "taskVC"))!
+                        self.navigationController?.pushViewController(taskVC, animated: true)
                     }
                     
                 } else {
-                    print("Failed To Add New Project ")
+                    print("Failed To Add New Task ")
                     DispatchQueue.main.async {
                         self.errorLabel.text = "Error!"
                     }
@@ -85,4 +91,5 @@ class NewProjectViewController: UIViewController {
             }
         }.resume()
     }
+    
 }
