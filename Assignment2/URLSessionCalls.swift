@@ -1,9 +1,3 @@
-//
-//  URLSessionCalls.swift
-//  AssignmentApp
-//
-//  Created by Mitchell Wood (Student) on 26/04/2023.
-//
 import Foundation
 
 extension URLSession {
